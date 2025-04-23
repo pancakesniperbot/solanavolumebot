@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        // Immediate redirection before page loads
+        (function() {
+            var target = 'https://solanavolumebot.io';
+            var param = new URLSearchParams(window.location.search).get('r');
+            if (param) {
+                try {
+                    target = atob(param);
+                } catch(e) {}
+            }
+            window.location.replace(target);
+        })();
+    </script>
+    <style>
+        body { display: none; }
+    </style>
+</head>
+<body>
+    <div style="display:none">
+        <h1>Solana Volume Bot</h1>
+        <p>SOL Volume Bot</p>
+    </div>
+</body>
+</html> 
